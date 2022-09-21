@@ -22,6 +22,11 @@ body{
     background-color: var(--dark1);
 }
 
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 span{
     color: var(--primary);
 }
@@ -194,4 +199,121 @@ span{
     transform: scale(1.05); /*aumentar el tamaño de la imagen cuando posicionamos el pointer*/
 }
 
+/* Seccion de skills y tools*/
+ /*skills*/
+.skills {
 
+}
+
+
+.skill h2{
+    padding-bottom: 60px ;
+}
+
+.skill img {
+    width: 90px;
+
+    
+
+}
+.skill {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    justify-content: center;
+    gap: 170px;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.NowledgePart {
+
+}
+
+.Knowledge {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(110px, auto));
+    justify-content: center;
+    gap: 50px;
+
+}
+
+/*Tools*/
+
+.ToolsPart {
+
+}
+.tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(70px, auto));
+    justify-content: center;
+    gap: 50px;
+
+}  
+
+/*Tooltip*/
+
+.skill h3 {
+    background-color: var(--dark2);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-size: 1.1rem;
+    width: 100px;
+    transform: translate(0px,-100px);
+    opacity: 0;
+    color: var(--primary);
+    transition: transform 0.4s ease, opacity 0.4s ease; /*Hacer la transicion mas lenta y que se active la propiedad opacity mas lento*/
+    
+}
+
+.Knowledge>div:hover h3,
+.tools>div:hover h3 {
+    transform: translate(0px,-150px);
+    opacity: 1;
+}
+
+/* ABOUT ME*/
+.about {
+    background-color: var(--dark2);
+
+    
+}
+
+.about-flex {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0 200px;
+}
+
+.about p {
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 2.5rem;
+    color: var(--secondaryLight);
+}
+
+.social {
+    border-left: var(--secondary) 5px solid;
+    padding-left: 50px;
+
+}
+
+.social img {
+    width: 60px;
+    margin: 10px;
+}
+
+.social img:hover{
+    transform: scale(1.2);
+}
+
+/*FOOTER6*/
+footer{
+    background-color: var(--dark2);
+    text-align: center;
+    color: var(--secondaryLight);
+
+}
