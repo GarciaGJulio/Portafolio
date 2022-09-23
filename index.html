@@ -11,30 +11,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./node_modules/eins-modal/dist/css/eins-modal.min.css">>
-
-    <link rel="stylesheet" href="./style.css">
+    
 
 </head>
 <body>
+
     <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#inicio">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#briefcase">Portafolio</a>
+                    </li>
+                    <li>
+                        <a href="#about-me">Sobre mi</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </div>
+        
+
+    </header>
+
+
+    <section id="inicio">
         <div class="hero">
            <div class="container"> 
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="xd">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="xd">Portafolio</a>
-                        </li>
-                        <li>
-                            <a href="xd">Sobre mi</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            
             <img src="./img/fondo-desktop.jpg" alt="fondo">
         </div>
         
@@ -53,17 +61,17 @@
             </div>
 
             <div class="contactIcon">
-                <a href="https://github.com/GarciaGJulio"><img src="./img/github.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/julio-garcia-4ba371208/"> <img src="./img/linkedin.png" alt=""></a>
-                <a href=""><img src="./img/mail.png" alt=""></a>
+                <a href="https://github.com/GarciaGJulio" target="_blank"><img src="./img/github.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/julio-garcia-4ba371208/"target="_blank"> <img src="./img/linkedin.png" alt=""></a>
+                <a data-modal-id="contact-me"><img src="./img/mail.png" alt=""></a>
             </div>
             <div class="squareText3">
-                <a href="#aboutMe"><span>About me |</span> Sobre mi</a>
+                <a href="#about-me"><span>About me |</span> Sobre mi</a>
             </div>
 
 
         </div>
-    </header>
+    </section>
      
     
     <!-- seccion de proyectos-->     
@@ -132,7 +140,7 @@
 
 
     </section>
-    <section class="about">
+    <section class="about" id="about-me">
         <div class="about-flex container">
             <div class="about-info">
                 <p>
@@ -146,16 +154,16 @@
             </div>
 
             <div class="social">
-                <a href=""><img src="./img/github.png" alt=""></a>
-                <a href=""><img src="./img/mail.png" alt=""></a>
-                <a href=""><img src="./img/linkedin.png" alt=""></a>
-                <a href=""><img src="./img/youtube (1).png" alt=""></a>
+                <a href="" target="_blank"><img src="./img/github.png" alt=""></a>
+                <a data-modal-id="contact-me"><img src="./img/mail.png" alt=""></a>
+                <a href="" target="_blank"><img src="./img/linkedin.png" alt=""></a>
+                <a href="" target="_blank"><img src="./img/youtube (1).png" alt=""></a>
             </div>
 
         </div>
         <div class="icon-elements">
             <div>
-                <a href="https://github.com/GarciaGJulio/Portafolio"><img src="./img/github.png" alt="">
+                <a href="https://github.com/GarciaGJulio/Portafolio" target="_blank"><img src="./img/github.png" alt="proyecto portafolio">
                     <span>
                         /ver el proyecto en GitHub
                     </span>
@@ -167,10 +175,6 @@
 
     </section>
 
-    <footer class="container">
-        <p> ® 2022 Copyright | Designed by JULIAN  </p>
-        
-    </footer>
 
 
     <!-- MODAL SECTION-->
@@ -191,7 +195,7 @@
                 
 
                 <div class="eins-modal-text2">
-                    <span>Enlace: </span><a href="http://127.0.0.1:5500/index.html">http://127.0.0.1:5500/index.html</a>
+                    <span>Enlace: </span><a href="http://127.0.0.1:5500/index.html" target="_blank">http://127.0.0.1:5500/index.html</a>
                 </div>
 
                 <div class="eins-modal-text3">
@@ -231,7 +235,7 @@
                 
 
                 <div class="eins-modal-text2">
-                    <span>Enlace: </span><a href="http://127.0.0.1:5500/index.html">http://127.0.0.1:5500/index.html</a>
+                    <span>Enlace: </span><a href="http://127.0.0.1:5500/index.html" target="_blank">http://127.0.0.1:5500/index.html</a>
                 </div>
 
                 <div class="eins-modal-text3">
@@ -251,8 +255,36 @@
         </div>
 
     </div>
+     <!-- MODAL SECTION FORM CONTACTME-->
+     <div id="contact-me" class="eins-modal" data-options="openTransition: expandIn;
+     openDuration: 200;">
+         <div class="eins-modal-content">
+             <div class="eins-modal-close"></div> 
+             <!-- modify this form HTML and place wherever you want your form -->
+             <form class="form" action="https://formspree.io/f/mnqrdjao"  method="POST">
+                <label>
+                    Tu correo electrónico:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Tu mensaje:
+                     <textarea name="message"></textarea>
+                </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Enviar</button>
+            </form>  
+        
+         </div>
+ 
+     </div>
+
     
 
-    <script src="/node_modules/eins-modal/dist/js/eins-modal.min.js"></script>
+    <footer class="container">
+        <p> ® 2022 Copyright | Designed by JULIAN  </p>
+        
+    </footer>
+
+
 </body>
 </html>

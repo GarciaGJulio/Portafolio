@@ -14,6 +14,15 @@
     --dark2: #050505;
 
 }
+/*HACER EL MENÚ STICKY PARA QUE SE MANTENGA EN PANTALLA DURANTE LA NAVEGACION*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background-color: var(--dark2);
+    padding: 5px 0;
+}
+/**/
 
 body{
     font-size: 18px;
@@ -21,6 +30,12 @@ body{
     color: var(--secondary);
     background-color: var(--dark1);
 }
+
+header{
+    position: sticky;
+    z-index: 50;
+}
+
 
 .container{
     max-width: 1200px;
@@ -45,6 +60,7 @@ span{
     color: white;
 
 }
+
 
 /* crear el efecto de linea a bajo de las etiquetas a cuando el pointer se posiciona sobre el*/
 .navbar a:hover{
@@ -351,6 +367,14 @@ footer{
 
 
 /*MODALS*/
+
+
+.eins-modal-close {
+    border: none;
+}
+.eins-modal-close:hover {
+    color: var(--primary);
+}
 .eins-modal-content {
     max-width: 700px;
     background-color:var(--dark1);
@@ -358,7 +382,7 @@ footer{
 }
 
 .eins-modal-preview {
-    width: 300px;
+    max-width: 300px;
     height: 300px;
     margin: 0 auto;
     
@@ -373,7 +397,7 @@ footer{
 
 .modalYardsale-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    grid-template-columns: repeat(auto-fit,minmax(270px,auto));
 
 }
 
@@ -393,18 +417,56 @@ footer{
 
 }
 
-.eins-modal-text3 {
-
-}
-
-.eins-modal-tec {
-
-}
-
 .eins-modal-tec img {
     width: 50px;
     height: 50px;
 
 }
 
+
+/*CONTACT FORM*/
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+
+.form>label>input{
+    background-color: var(--dark2);
+    border-radius: 10px;
+    padding: 10px 60px;
+    color: var(--secondary);
+    outline: none; /*para quitar el color automático cuando se le da el foco al escribir los datos*/
+    opacity: .8;
+    width: 100%;
+
+}
+
+.form>label>textarea {
+    background-color: var(--dark2);
+    border-radius: 10px;
+    padding: 60px;
+    color: var(--secondary);
+    outline: none;
+    width: 100%;
+    opacity: .8
+
+}
+
+label {
+    padding: 5x;
+
+}
+
+.form>button {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+
+}
 
